@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11152b">
+  <meta name="description" content="اكتشف Wero، تطبيق الغرف الصوتية والتواصل. تعرّف على الميزات ومعلومات التطبيق وروابط التنزيل الرسمية.">
+  <title>Wero | صوتك أقرب ومجتمعك معك</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: light-dark(#f7f8fc, #0a0d1b);
+      --card: light-dark(#ffffff, #11162a);
+      --soft: light-dark(#eff1fb, #171d35);
+      --text: light-dark(#171b34, #f6f7ff);
+      --muted: light-dark(#656b84, #adb4d0);
+      --line: light-dark(#e3e6f2, #2a3150);
+      --brand: #6657f5;
+      --brand2: #5143da;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 25px;
+    }
+    .logo-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      color: #fff;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #8d80ff, #5140db);
+    }
+    .links { display: flex; gap: 24px; color: var(--muted); font-size: 14px; }
+    .links a:hover { color: var(--brand); }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 13px;
+      padding: 12px 19px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .primary { color: #fff; background: var(--brand); }
+    .secondary { border-color: var(--line); background: var(--card); color: var(--text); }
+    .menu {
+      display: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--text);
+      padding: 9px 13px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .hero { padding: 75px 0 85px; overflow: hidden; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 55px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 6px 13px;
+      color: var(--brand);
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    h1 { font-size: clamp(38px, 5vw, 61px); line-height: 1.3; margin: 20px 0; }
+    .gradient {
+      color: var(--brand);
+      background: linear-gradient(100deg, #8d80ff, #28aeaa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .intro { color: var(--muted); font-size: 17px; max-width: 560px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .note { color: var(--muted); font-size: 12px; margin-top: 17px; }
+
+    .visual {
+      min-height: 460px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .orb {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #b5afff, #6a5af4 50%, #4033a2);
+      box-shadow: 0 35px 80px #5143da44;
+    }
+    .phone {
+      width: 245px;
+      position: relative;
+      z-index: 2;
+      padding: 9px;
+      border-radius: 35px;
+      background: #15182c;
+      border: 2px solid #ffffff66;
+      box-shadow: 0 25px 65px #080b244f;
+      transform: rotate(-3deg);
+    }
+    .screen {
+      min-height: 390px;
+      padding: 17px 13px;
+      border-radius: 27px;
+      color: #202441;
+      background: #f9f9ff;
+    }
+    .phone-top { display: flex; justify-content: space-between; color: #777d9a; font-size: 11px; }
+    .phone-title { font-weight: 900; margin-top: 17px; }
+    .room {
+      margin-top: 12px;
+      padding: 16px 12px;
+      border-radius: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, #6d5bf6, #8d7eff);
+    }
+    .room small { display: block; opacity: .85; font-size: 10px; }
+    .room strong { display: block; margin: 4px 0; }
+    .people { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px 5px; margin-top: 17px; }
+    .person { text-align: center; font-size: 9px; color: #777d9a; }
+    .avatar {
+      width: 37px;
+      height: 37px;
+      margin: 0 auto 5px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #a8d5ff, #6f7cf3);
+    }
+    .avatar:nth-child(2n) { background: linear-gradient(135deg, #ffc6ac, #e76d9e); }
+    .phone-controls { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
+    .control { padding: 7px 11px; border-radius: 12px; background: #eceeff; }
+    .control.main { color: white; background: var(--brand); }
+
+    .section { padding: 78px 0; }
+    .soft { background: var(--soft); }
+    .section-head { max-width: 680px; text-align: center; margin: 0 auto 38px; }
+    .kicker { font-size: 12px; font-weight: 900; color: var(--brand); letter-spacing: 1px; }
+    h2 { font-size: clamp(27px, 3.5vw, 40px); line-height: 1.4; margin: 9px 0 12px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .feature {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 21px;
+      background: var(--card);
+      transition: .2s;
+    }
+    .feature:hover { transform: translateY(-4px); }
+    .feature-icon {
+      display: grid;
+      place-items: center;
+      width: 49px;
+      height: 49px;
+      border-radius: 15px;
+      background: var(--soft);
+      font-size: 23px;
+    }
+    .feature h3 { font-size: 17px; margin: 14px 0 6px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 13px; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--card); }
+    .number {
+      display: grid;
+      place-items: center;
+      width: 39px;
+      height: 39px;
+      border-radius: 12px;
+      background: var(--brand);
+      color: white;
+      font-weight: 900;
+    }
+    .step h3 { font-size: 17px; }
+    .step p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+
+    .download {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: 38px;
+      border-radius: 28px;
+      background: linear-gradient(120deg, #1b2042, #342b7f 75%, #4a3cc0);
+      color: white;
+    }
+    .download h2 { margin-top: 0; }
+    .download p { color: #d6d8f6; }
+    .download .button { background: white; color: #342b7f; white-space: nowrap; }
+    .download small { color: #d6d8f6; }
+
+    .faq { max-width: 850px; margin: auto; display: grid; gap: 12px; }
+    details { border: 1px solid var(--line); border-radius: 15px; background: var(--card); }
+    summary { cursor: pointer; padding: 17px 20px; font-weight: 800; }
+    details p { padding: 0 20px 17px; margin: 0; color: var(--muted); font-size: 14px; }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
+    .contact p { color: var(--muted); font-size: 14px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .footer-copy { max-width: 440px; font-size: 12px; color: var(--muted); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--muted); }
+
+    .toast {
+      display: none;
+      position: fixed;
+      z-index: 20;
+      bottom: 20px;
+      left: 20px;
+      max-width: calc(100% - 40px);
+      padding: 13px 17px;
+      border-radius: 13px;
+      color: white;
+      background: #191d38;
+      box-shadow: 0 10px 35px #0004;
+      font-size: 13px;
+    }
+    .toast.show { display: block; }
+
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 15px; }
+      .hero-content { text-align: center; }
+      .intro { margin: auto; }
+      .hero-actions { justify-content: center; }
+      .note { text-align: center; }
+      .features { grid-template-columns: repeat(2, 1fr); }
+      .links { gap: 13px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: calc(100% - 30px); }
+      .nav { min-height: 68px; }
+      .menu { display: block; }
+      .links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        right: 15px;
+        left: 15px;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: var(--card);
+      }
+      .links.open { display: grid; }
+      .links a { padding: 9px; }
+      .nav > .button { display: none; }
+      .hero { padding: 48px 0 35px; }
+      .visual { min-height: 395px; }
+      .orb { width: 285px; height: 285px; }
+      .phone { width: 224px; }
+      .screen { min-height: 360px; }
+      .section { padding: 58px 0; }
+      .features, .steps { grid-template-columns: 1fr; }
+      .download { grid-template-columns: 1fr; padding: 25px; text-align: center; }
+      .download .button { justify-self: center; }
+      .contact, .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home"><span class="logo-icon">W</span> Wero</a>
+      <nav class="links" id="links">
+        <a href="#home">الرئيسية</a>
+        <a href="#features">المميزات</a>
+        <a href="#how">كيف يعمل؟</a>
+        <a href="#download">التنزيل</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <a class="button primary" href="#download">اكتشف Wero ←</a>
+      <button class="menu" id="menu" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="tag">مساحة تواصل تجمعك بالناس</span>
+          <h1>صوتك أقرب،<br><span class="gradient">ومجتمعك معك.</span></h1>
+          <p class="intro">اكتشف Wero، تطبيق الغرف الصوتية الذي يمنحك مساحة للحديث والتعارف والانضمام إلى مجتمعات تناسب اهتماماتك.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#download">تعرّف على التنزيل ↓</a>
+            <a class="button secondary" href="#features">استكشف المميزات</a>
+          </div>
+          <p class="note">كل ما تحتاج معرفته عن Wero في مكان واحد.</p>
+        </div>
+
+        <div class="visual" aria-label="تصور توضيحي لواجهة غرفة صوتية">
+          <div class="orb"></div>
+          <div class="phone">
+            <div class="screen">
+              <div class="phone-top"><span>9:41</span><span>● ● ●</span></div>
+              <div class="phone-title">استكشف الغرف</div>
+              <div class="room">
+                <small>غرفة مباشرة الآن</small>
+                <strong>مساحة الأصدقاء</strong>
+                <small>تواصل • حديث • مجتمع</small>
+              </div>
+              <div class="people">
+                <div class="person"><div class="avatar"></div>سامي</div>
+                <div class="person"><div class="avatar"></div>لين</div>
+                <div class="person"><div class="avatar"></div>عمر</div>
+                <div class="person"><div class="avatar"></div>نور</div>
+                <div class="person"><div class="avatar"></div>آدم</div>
+                <div class="person"><div class="avatar"></div>يارا</div>
+                <div class="person"><div class="avatar"></div>كريم</div>
+                <div class="person"><div class="avatar"></div>ميرا</div>
+              </div>
+              <div class="phone-controls">
+                <span class="control">♫</span>
+                <span class="control main">🎙</span>
+                <span class="control">＋</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">لماذا Wero؟</span>
+          <h2>مساحة مصممة للتواصل</h2>
+          <p>تعرّف على أبرز جوانب تجربة Wero، من الغرف الصوتية إلى أدوات تنظيم المجتمع.</p>
+        </div>
+        <div class="features">
+          <article class="feature"><div class="feature-icon">🎙</div><h3>غرف صوتية</h3><p>تواصل مع أعضاء الغرفة بالصوت وشارك في المحادثات.</p></article>
+          <article class="feature"><div class="feature-icon">👥</div><h3>مجتمع يجمع الأعضاء</h3><p>مساحة للتعارف والحديث وقضاء الوقت مع الآخرين.</p></article>
+          <article class="feature"><div class="feature-icon">⚙</div><h3>إدارة الغرف</h3><p>أدوات لتنظيم الغرف وإدارة الأعضاء بحسب الصلاحيات المتاحة.</p></article>
+          <article class="feature"><div class="feature-icon">🛡</div><h3>تنظيم المجتمع</h3><p>إعدادات تساعد على تنظيم مسؤوليات إدارة الغرف.</p></article>
+          <article class="feature"><div class="feature-icon">✦</div><h3>تجربة عربية</h3><p>واجهة عربية لتسهيل الوصول إلى أقسام التطبيق.</p></article>
+          <article class="feature"><div class="feature-icon">📱</div><h3>مصمم للهاتف</h3><p>تعرّف على التطبيق وميزاته من هاتفك أو حاسوبك.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">ابدأ رحلتك</span>
+          <h2>ثلاث خطوات للتعرّف على Wero</h2>
+          <p>ستجد هنا المعلومات الأساسية وروابط التنزيل الرسمية عند اعتمادها.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="number">١</div><h3>تعرّف على التطبيق</h3><p>شاهد معلومات Wero وميزاته قبل الاستخدام.</p></article>
+          <article class="step"><div class="number">٢</div><h3>حمّل النسخة الرسمية</h3><p>استخدم رابط التنزيل المعتمد عند إضافته إلى الموقع.</p></article>
+          <article class="step"><div class="number">٣</div><h3>استكشف الغرف</h3><p>افتح التطبيق وتعرّف على الغرف وأدوات التواصل المتاحة.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="download">
+      <div class="container">
+        <div class="download">
+          <div>
+            <span class="kicker" style="color:#c6beff">WERO DOWNLOADS</span>
+            <h2>جاهز لاكتشاف Wero؟</h2>
+            <p>ستجد هنا رابط Google Play أو رابط ملف APK الرسمي عندما يصبح جاهزًا للنشر.</p>
+            <small>روابط التنزيل لم تُضف بعد.</small>
+          </div>
+          <button class="button" type="button" data-soon>روابط التنزيل قريبًا ↓</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">أسئلة شائعة</span>
+          <h2>معلومات قبل البدء</h2>
+        </div>
+        <div class="faq">
+          <details><summary>من أين أنزّل تطبيق Wero؟</summary><p>سنضيف رابط التنزيل الرسمي هنا بعد اعتماده.</p></details>
+          <details><summary>ما الذي يقدمه Wero؟</summary><p>يهدف التطبيق إلى توفير غرف صوتية ومساحات للتواصل، مع أدوات لإدارة الغرف بحسب الوظائف المتاحة في النسخة المنشورة.</p></details>
+          <details><summary>كيف أتواصل مع فريق Wero؟</summary><p>ستُضاف معلومات التواصل الرسمية في هذا القسم عند تحديد قناة الدعم.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="container contact" id="contact">
+      <div>
+        <span class="kicker">ابقَ على تواصل</span>
+        <h2 style="font-size:26px;margin:4px 0">معلومات Wero الرسمية</h2>
+        <p>سيتم تحديث الموقع بروابط التنزيل وقنوات الدعم عند اعتمادها.</p>
+      </div>
+      <button class="button secondary" type="button" data-soon>قنوات التواصل قريبًا</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="#home"><span class="logo-icon">W</span> Wero</a>
+        <div class="footer-copy">موقع تعريفي لتطبيق Wero. تُضاف الصور والروابط الرسمية قبل الإطلاق العام.</div>
+      </div>
+      <nav class="footer-links">
+        <a href="#home">الرئيسية</a>
+        <a href="#features">المميزات</a>
+        <a href="#download">التنزيل</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <div class="footer-copy">© <span id="year"></span> Wero</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">سنضيف الرابط الرسمي هنا بعد اعتماده.</div>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const links = document.getElementById('links');
+    const toast = document.getElementById('toast');
+    let toastTimer;
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    menu.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+    });
+
+    links.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('open');
+        menu.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('[data-soon]').forEach(button => {
+      button.addEventListener('click', () => {
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+      });
+    });
+  </script>
+</body>
+</html>
