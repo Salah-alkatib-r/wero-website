@@ -29,9 +29,8 @@
       if(url.protocol!=='https:' || !['github.com','objects.githubusercontent.com','downloads.werochat.app'].includes(url.hostname))throw Error('download host');
       result.replaceChildren(element('b',label || 'نسختك جاهزة'));
       result.append(element('p',abi==='universal'?'تعذّر تأكيد المعمارية. النسخة الشاملة تضم المعماريات المدعومة، وتناسب الأجهزة عند عدم معرفة نوع النظام.':'هذه النسخة اختيرت وفق معلومات النظام التي أتاحها متصفح أندرويد. يمكنك اختيار النسخة الشاملة إذا لم تتثبت.'));
-      const link=element('a',`تحميل Wero · ${(file.bytes/1048576).toFixed(1)} MB`,'button');link.href=url.href;link.rel='noopener';result.append(link);
-      result.append(element('p',`الإصدار ${manifest.version} · Android ${manifest.minimumAndroid}+ · الاسم بعد التثبيت Wero`));
-      result.append(element('code','SHA-256: '+file.sha256));
+      const link=element('a',`تحميل Wero · ${(file.bytes/1048576).toFixed(1)} MB`,'button');link.href=url.href;link.rel='noopener';link.download='Wero.apk';result.append(link);
+      result.append(element('p',`متوافق مع Android ${manifest.minimumAndroid} وأحدث`));
       if(abi!=='universal'){
         const fallback=element('button','أحتاج النسخة الشاملة','inline-button');fallback.addEventListener('click',()=>offer('universal','النسخة الشاملة'));result.append(fallback);
       }
@@ -85,5 +84,5 @@
   $('universal-download').addEventListener('click',()=>offer('universal','النسخة الشاملة'));
   const nav=$('nav-toggle');nav.addEventListener('click',()=>{const open=$('nav-links').classList.toggle('open');nav.setAttribute('aria-expanded',String(open));});
   document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>{$('nav-links').classList.remove('open');nav.setAttribute('aria-expanded','false');}));
-  loadRelease().then(m=>{$('release-summary').textContent=m.published?`النسخة الرسمية ${m.version} · Android ${m.minimumAndroid}+`:'نسخة أندرويد الرسمية · يجري تجهيز روابط النشر';}).catch(()=>{});
+  loadRelease().then(m=>{$('release-summary').textContent=m.published?`نسخة أندرويد الرسمية · Android ${m.minimumAndroid}+`:'نسخة أندرويد الرسمية · يجري تجهيز روابط النشر';}).catch(()=>{});
 })();
