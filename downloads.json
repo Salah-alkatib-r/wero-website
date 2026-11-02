@@ -1,28 +1,30 @@
 {
-  "published": true,
-  "version": "1.0.1",
-  "build": 2019,
   "minimumAndroid": 7,
   "files": {
     "arm64-v8a": {
-      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-arm64-v8a.apk",
-      "bytes": 71514222,
-      "sha256": "f779b2a3e30593ca1a6f1fb9015f9f7e903643a6829e506c41d2c1db9586c18b"
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-6021/Wero-Official-1.0.2-6021-arm64-v8a.apk",
+      "bytes": 71514221,
+      "sha256": "bfb63854c4f0a1e0adb24ab4c09a762975625d053a3683ae5d54677b93702d00"
     },
     "armeabi-v7a": {
-      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-armeabi-v7a.apk",
-      "bytes": 63381299,
-      "sha256": "f9b63e406a7db47acfa75b7a97c6acfa17ca15d3a770118d9cd0414eb33b505c"
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-6021/Wero-Official-1.0.2-6021-armeabi-v7a.apk",
+      "bytes": 63381301,
+      "sha256": "06b27fb3f1b95ed02e57e269e43335e2e8841e993cdefc7a87ab39b034c673a8"
     },
     "x86_64": {
-      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-x86_64.apk",
-      "bytes": 76940919,
-      "sha256": "f9b08994a0a778f4c1c53027969035ccae2d50f26e6a33b9a9a7c283be9d0129"
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-6021/Wero-Official-1.0.2-6021-x86_64.apk",
+      "bytes": 76875399,
+      "sha256": "38fe7dab0cf6ce62aa042f2ffc0d004e6c8133eaf90f13e475dfb9b7932c9505"
     },
     "universal": {
-      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-universal.apk",
-      "bytes": 130174508,
-      "sha256": "7198b9a4324bce70d57ff9b957abc82097402cce3f0c3c4f6c74458170797435"
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-6021/Wero-Official-1.0.2-6021-universal.apk",
+      "bytes": 130108975,
+      "sha256": "ba8fa53b17128e65885fd09b1ee7e30beab53d59be6aecd636c0d11fa3d0bf40"
     }
+  },
+  "windows": {
+    "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/windows-1.0.2/Wero-Windows-1.0.2.zip",
+    "bytes": 40839795,
+    "sha256": "325844a2d295e12bbce75f458d3b01441e15d9c6f98d239dcb236f16682209cf"
   }
 }
