@@ -1,0 +1,28 @@
+{
+  "published": true,
+  "version": "1.0.1",
+  "build": 2019,
+  "minimumAndroid": 7,
+  "files": {
+    "arm64-v8a": {
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-arm64-v8a.apk",
+      "bytes": 71514222,
+      "sha256": "f779b2a3e30593ca1a6f1fb9015f9f7e903643a6829e506c41d2c1db9586c18b"
+    },
+    "armeabi-v7a": {
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-armeabi-v7a.apk",
+      "bytes": 63381299,
+      "sha256": "f9b63e406a7db47acfa75b7a97c6acfa17ca15d3a770118d9cd0414eb33b505c"
+    },
+    "x86_64": {
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-x86_64.apk",
+      "bytes": 76940919,
+      "sha256": "f9b08994a0a778f4c1c53027969035ccae2d50f26e6a33b9a9a7c283be9d0129"
+    },
+    "universal": {
+      "url": "https://github.com/Salah-alkatib-r/wero-website/releases/download/android-2019/Wero-Official-1.0.1-2019-universal.apk",
+      "bytes": 130174508,
+      "sha256": "7198b9a4324bce70d57ff9b957abc82097402cce3f0c3c4f6c74458170797435"
+    }
+  }
+}
