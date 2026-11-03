@@ -1,6 +1,6 @@
 // Fixed public release allowlist: never forwards user-supplied URLs or credentials.
-const release = 'android-6026';
-const prefix = 'Wero-Official-1.0.5-6026-';
+const release = 'android-6027';
+const prefix = 'Wero-Official-1.0.5-6027-';
 const files = {
   'wero-android.apk': { release, file: `${prefix}universal.apk`, type: 'application/vnd.android.package-archive' },
   'wero-alternative.apk': { release, file: `${prefix}universal.apk`, type: 'application/vnd.android.package-archive' },
