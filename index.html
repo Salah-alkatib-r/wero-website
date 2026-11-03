@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -17,6 +18,40 @@
   <meta name="twitter:title" content="ويرو شات | Wero Chat – دردشة صوتية وكاميرا">
   <meta name="twitter:description" content="غرف دردشة صوتية وكاميرا ورسائل وصور. حمّل ويرو شات لأندرويد وويندوز.">
   <meta name="twitter:image" content="https://werochat.app/assets/wero-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://werochat.app/#website",
+        "url": "https://werochat.app/",
+        "name": "ويرو شات",
+        "alternateName": [
+          "Wero Chat",
+          "ويرو",
+          "Wero"
+        ],
+        "inLanguage": "ar",
+        "publisher": {
+          "@id": "https://werochat.app/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://werochat.app/#organization",
+        "url": "https://werochat.app/",
+        "name": "Wero Chat",
+        "alternateName": "ويرو شات",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://werochat.app/assets/wero-icon.png"
+        },
+        "email": "support@werochat.app"
+      }
+    ]
+  }
+  </script>
   <link rel="canonical" href="https://werochat.app/">
   <link rel="icon" href="/assets/wero-icon.png">
   <link rel="preload" href="/assets/Tajawal-Bold.ttf" as="font" type="font/ttf" crossorigin>
@@ -38,9 +73,9 @@
   <section class="hero" id="home">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> صوت يجمعنا. ومساحة تشبهنا.</p>
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> ويرو شات | Wero Chat</p>
         <h1>قريب من ناسك.<br><span>وين ما كنت.</span></h1>
-        <p class="hero-description">في Wero، المسافة ما بتغيّر الجلسة.<br>غرف صوتية، دردشة وكاميرا… وناس بتحب تحكي معهم.</p>
+        <p class="hero-description">في ويرو شات (Wero Chat)، المسافة ما بتغيّر الجلسة.<br>غرف صوتية، دردشة وكاميرا… وناس بتحب تحكي معهم.</p>
         <div class="hero-actions"><a class="button" href="#download">حمّل Wero <span aria-hidden="true">↙</span></a><a class="text-link" href="#experience">تعرّف علينا <span aria-hidden="true">←</span></a></div>
         <div class="hero-platforms" aria-label="المنصات"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 5-2-3m12 3 2-3M5 10a7 7 0 0 1 14 0Zm0 0v8h14v-8M8 18v4m8-4v4M2 11v6m20-6v6"/><path d="M8 7h.01M16 7h.01"/></svg>أندرويد</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h8v7H3zm11 0h7v7h-7zM3 14h8v7H3zm11 0h7v7h-7z"/></svg>ويندوز</span><span class="soon">آيفون <small>قريبًا</small></span></div>
       </div>
@@ -48,7 +83,7 @@
         <div class="visual-backdrop" aria-hidden="true"></div>
         <div class="room-preview">
           <div class="preview-bar"><span class="preview-brand" dir="ltr">Wero.</span><span class="preview-room">جلسة على مزاجك <i aria-hidden="true"></i></span><span class="preview-menu" aria-hidden="true">•••</span></div>
-          <div class="preview-stage"><div class="logo-halo"><img src="/assets/wero-icon.png" alt="شعار Wero" width="144" height="144"></div><div class="sound-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p>الكلام الحلو، بيجمعنا.</p></div>
+          <div class="preview-stage"><div class="logo-halo"><img src="/assets/wero-icon.png" alt="شعار Wero" width="144" height="144"></div><div class="sound-line" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><p>الكلام الحلو، بيجمعنا.</p></div>
           <div class="preview-bottom"><div class="demo-bubble">أهلًا بناسك <span aria-hidden="true">✦</span></div><span class="mic-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></svg></span></div>
         </div>
         <div class="visual-caption"><span class="caption-line" aria-hidden="true"></span> صوت. دردشة. وقرب أكتر.</div>
@@ -57,7 +92,7 @@
   </section>
   <section class="platform-ribbon" aria-label="توفر التطبيق"><div class="wrap ribbon-inner"><p>تجربتك، <strong>على أكثر من منصة.</strong></p><div><span>Android <b>متوفر</b></span><span>Windows <b>متوفر</b></span><span>iPhone <b class="muted-badge">قريبًا</b></span></div></div></section>
   <section class="section wrap experience-grid" id="experience">
-    <div class="section-heading"><p class="eyebrow">هذا هو Wero</p><h2>جلسة صغيرة.<br>حكايات <span>كتيرة.</span></h2><p>ادخل باسمك، اختَر غرفتك،<br>وخلّي الباقي على الكلام.</p><a class="text-link" href="#download">خلّينا نلتقي <span aria-hidden="true">←</span></a></div>
+    <div class="section-heading"><p class="eyebrow">هذا هو ويرو شات</p><h2>جلسة صغيرة.<br>حكايات <span>كتيرة.</span></h2><p>ادخل باسمك، اختَر غرفتك،<br>وخلّي الباقي على الكلام.</p><a class="text-link" href="#download">خلّينا نلتقي <span aria-hidden="true">←</span></a></div>
     <div class="feature-list"><article><span class="feature-number">01</span><div><h3>صوتك له مكان</h3><p>اسمع، اطلب المايك، وشارك الحديث. جلسات صوتية تقرّب المسافات.</p></div><span class="feature-glyph" aria-hidden="true">≋</span></article><article><span class="feature-number">02</span><div><h3>تواصل بطريقتك</h3><p>نصوص، صور وإيموجي متحركة، وكاميرا. وخاص عندما يسمح الطرف الآخر.</p></div><span class="feature-glyph" aria-hidden="true">✧</span></article><article><span class="feature-number">03</span><div><h3>غرفتك تشبهك</h3><p>ألوان وإعدادات وأدوات إشراف، وملفات ملكية ومحمية للاشتراكات المفعّلة.</p></div><span class="feature-glyph" aria-hidden="true">⌘</span></article></div>
   </section>
   <section class="section wrap showcase-section" id="explore"><div class="section-heading"><p class="eyebrow">WERO عن قُرب</p><h2>لمحة من عالمك.<br><span>بصوتك وألوانك.</span></h2><p>تصفّح الصور واكتشف الدردشة، ملفك الشخصي وإعداداتك.</p></div><div class="showcase-strip" tabindex="0" aria-label="صور ميزات Wero — اسحب لمشاهدة المزيد"><figure class="showcase-card"><img src="/assets/wero-chat.jpg" width="941" height="1672" loading="lazy" decoding="async" alt="دردشة وصوت وكاميرا ورموز تعبّر عنك"><figcaption>دردشة وصوت وكاميرا ورموز تعبّر عنك</figcaption></figure><figure class="showcase-card"><img src="/assets/wero-settings.jpg" width="941" height="1672" loading="lazy" decoding="async" alt="إعدادات تناسب لغتك ولونك وخصوصيتك"><figcaption>إعدادات تناسب لغتك ولونك وخصوصيتك</figcaption></figure><figure class="showcase-card"><img src="/assets/wero-room.jpg" width="856" height="1002" loading="lazy" decoding="async" alt="إدارة غرفتك من مكان واحد"><figcaption>إدارة غرفتك من مكان واحد</figcaption></figure><figure class="showcase-card"><img src="/assets/wero-login.jpg" width="941" height="1672" loading="lazy" decoding="async" alt="اسم وصورة تعبّر عنك، دون رقم هاتف"><figcaption>اسم وصورة تعبّر عنك، دون رقم هاتف</figcaption></figure><figure class="showcase-card"><img src="/assets/wero-profile.jpg" width="941" height="1672" loading="lazy" decoding="async" alt="ملفك وصورك واهتماماتك في مساحة خاصة بك"><figcaption>ملفك وصورك واهتماماتك في مساحة خاصة بك</figcaption></figure></div><p class="showcase-hint">اسحب الصور لمشاهدة المزيد ←</p></section>
