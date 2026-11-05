@@ -1,12 +1,12 @@
 {
   "android": {
     "url": "/download/wero-android.apk",
-    "bytes": 81543602,
-    "sha256": "7003ab7e9371299cd88cb435450893c7836cbf11137ddb79e6f0188072fbeb68"
+    "bytes": 85080711,
+    "sha256": "29f38327b9a2fccb0c13b1b6b14e1fe2f12c583f367c3472e6ae98c4995b5d46"
   },
   "windows": {
     "url": "/download/wero-windows.exe",
-    "bytes": 39777329,
-    "sha256": "878da31da2fc9da320f04838b584355ccde73c9aa2cb9b7b3711f420c0729ebb"
+    "bytes": 32359287,
+    "sha256": "f8528b2d41f70c12569521b107037fe4909d99d8e1fc96ae7265516d988d3c7b"
   }
 }
