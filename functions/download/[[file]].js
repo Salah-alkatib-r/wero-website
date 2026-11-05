@@ -1,12 +1,12 @@
 // Fixed public release allowlist: never forwards user-supplied URLs or credentials.
-const release = 'android-6038';
-const androidFile = 'Wero-1.0.6-6038.apk';
+const release = 'android-6040';
+const androidFile = 'Wero-1.0.6-6040.apk';
 const files = {
   'wero-android.apk': { release, file: androidFile, type: 'application/vnd.android.package-archive' },
   'wero-alternative.apk': { release, file: androidFile, type: 'application/vnd.android.package-archive' },
   'wero-universal.apk': { release, file: androidFile, type: 'application/vnd.android.package-archive' },
   'wero-windows.zip': { release: 'windows-1.0.2', file: 'Wero-Windows-1.0.2.zip', type: 'application/zip' },
-  'wero-windows.exe': { release: 'windows-1.0.7', file: 'Wero-Setup-1.0.7.exe', type: 'application/vnd.microsoft.portable-executable' },
+  'wero-windows.exe': { release: 'windows-1.0.9', file: 'Wero-Setup-1.0.9.exe', type: 'application/vnd.microsoft.portable-executable' },
 };
 
 export async function onRequest({ request }) {
