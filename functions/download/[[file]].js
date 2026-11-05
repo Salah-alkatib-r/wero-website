@@ -6,7 +6,7 @@ const files = {
   'wero-alternative.apk': { release, file: androidFile, type: 'application/vnd.android.package-archive' },
   'wero-universal.apk': { release, file: androidFile, type: 'application/vnd.android.package-archive' },
   'wero-windows.zip': { release: 'windows-1.0.2', file: 'Wero-Windows-1.0.2.zip', type: 'application/zip' },
-  'wero-windows.exe': { release: 'windows-1.0.10', file: 'Wero-Setup-1.0.10.exe', type: 'application/vnd.microsoft.portable-executable' },
+  'wero-windows.exe': { release: 'windows-1.0.11', file: 'Wero-Setup-1.0.11.exe', type: 'application/vnd.microsoft.portable-executable' },
 };
 
 export async function onRequest({ request }) {
