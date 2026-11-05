@@ -7,4 +7,4 @@ Support: support@werochat.app — https://t.me/WeroChatSupport
 
 Public website files only. Android and Windows application source code is not included in this repository.
 
-Download Wero directly from the official website. Android offers one universal APK through direct download links. Windows 1.0.10 is available as an Arabic EXE installer; iPhone is coming soon.
+Download Wero directly from the official website. Android offers one universal APK through direct download links. Windows 1.0.11 is available as an Arabic EXE installer; iPhone is coming soon.

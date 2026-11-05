@@ -7,8 +7,8 @@
   },
   "windows": {
     "url": "/download/wero-windows.exe",
-    "bytes": 35384002,
-    "sha256": "62ce994e6e1810208270e46e6abc842eec75391a424d9ac78c35ed08a8aa2b22",
-    "version": "1.0.10"
+    "bytes": 35387943,
+    "sha256": "c279fdd622b121cdf4c60db61a0bf17abebff25fb9c7de8c0216245488a8be2c",
+    "version": "1.0.11"
   }
 }
