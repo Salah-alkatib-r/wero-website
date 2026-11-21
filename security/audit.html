@@ -1,12 +1,74 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ملخص التشفير من طرف إلى طرف ونتائج اختبارات الأمان في Wero Chat.">
+<link rel="canonical" href="https://werochat.app/security/audit.html">
 <title>تقرير التشفير والأمان | Wero Chat</title>
+<style>
+:root{color-scheme:light;--green:#13574b;--dark:#183c33;--line:#cbded4;--soft:#edf6f0;--muted:#455a51}
+*{box-sizing:border-box}body{margin:0;background:#eef4ef;color:var(--dark);font:16px/1.65 Tahoma,Arial,sans-serif}
+main{max-width:820px;margin:auto}nav{padding:16px 22px;display:flex;gap:18px;flex-wrap:wrap}
+a{color:#13574b;text-underline-offset:.18em}a:focus-visible{outline:2px solid #9b721e;outline-offset:3px}
+article{background:white;padding:26px 32px;margin:0 0 14px;border:1px solid var(--line)}
+header{border-top:6px solid var(--green);border-bottom:1px solid var(--line);padding:.85em 0;margin-bottom:1.25em}
+.brand{color:var(--green);font-weight:700;letter-spacing:.06em}h1{font-size:2em;line-height:1.25;margin:.2em 0 .45em}
+h2{font-size:1.23em;margin:1.25em 0 .4em}p{margin:.4em 0 .8em}.sub{color:var(--muted);margin:0}
+.summary{padding:.8em 1em;border-inline-start:4px solid var(--green);background:var(--soft)}
+table{border-collapse:collapse;width:100%;font-size:.96em}td,th{text-align:start;padding:.55em;border-bottom:1px solid var(--line)}
+thead{background:var(--soft)}td:last-child{color:var(--green);font-weight:700;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding-top:.6em;margin-top:1em;color:var(--muted);font-size:.9em}
+@media(max-width:500px){article{padding:19px 15px}h1{font-size:1.6em}td,th{padding:.46em .35em}}
+@page{size:A4;margin:16mm}
+@media print{body{background:white;font-size:11pt;line-height:1.55;print-color-adjust:exact;-webkit-print-color-adjust:exact}main{max-width:none}nav{display:none}article{padding:0;margin:0;border:0;break-after:page}article:last-child{break-after:auto}tr,.summary{break-inside:avoid}}
+</style>
+</head>
+<body>
 <main>
-<h1>تقرير التشفير والأمان</h1>
-<p>يشفّر Wero محتوى المحادثات الخاصة على جهاز المرسل. تتحقق الأجهزة المصرّح لها من سلامة المحتوى وتفكّ تشفيره محليًا. يستخدم التطبيق معيار MLS لإدارة مفاتيح المحادثة وتحديثها عند تغيّر العضوية.</p>
-<p>يتحقق التطبيق من مفاتيح المشاركين في الخلفية، ويمكن لمن يريد التحقق بنفسه مقارنة رمز الأمان.</p>
-<p lang="en" dir="ltr">Wero encrypts private conversation content on the sender’s device. Authorized participant devices verify and decrypt the content using session keys managed by the Messaging Layer Security protocol.</p>
+<nav aria-label="التنقل"><a href="./">شرح التشفير</a><a href="#english" lang="en">English</a><a href="wero-chat-encryption-audit.pdf">تحميل PDF</a></nav>
+<article>
+<header>
+  <div class="brand" lang="en">WERO CHAT</div>
+  <h1>تقرير التشفير والأمان</h1>
+  <p class="sub">أندرويد وويندوز · إصدار <bdi>1.0.42</bdi></p>
+</header>
+<p class="summary">نجحت جميع السيناريوهات المدرجة أدناه في اختبارات فريق Wero، بما فيها التجارب العملية التي أجراها صاحب المشروع.</p>
+<h2>كيف نحمي المحتوى؟</h2>
+<p>يشفّر Wero محتوى الخاص داخل الغرفة على جهاز المرسل. تتحقق أجهزة المشاركين المصرّح لهم من سلامة المحتوى وتفكّ تشفيره لديهم. تبقى مفاتيح فك التشفير على الأجهزة، ويُستخدم بروتوكول <bdi>MLS</bdi> لإدارة مفاتيح المحادثة وتحديثها عند تغيّر العضوية. <a href="https://www.rfc-editor.org/rfc/rfc9420.html">المعيار RFC 9420</a>.</p>
+<p>يتحقق التطبيق من مفاتيح المشاركين في الخلفية. وتبقى مقارنة رمز الأمان خيارًا إضافيًا متاحًا لمن يريد التحقق بنفسه.</p>
+<h2>نتائج الاختبارات</h2>
+<table><thead><tr><th scope="col">السيناريو</th><th scope="col">النتيجة</th></tr></thead><tbody>
+<tr><td>المحادثات الخاصة الفردية والجماعية داخل الغرفة</td><td>ناجح</td></tr>
+<tr><td>النصوص والصور والتسجيلات الصوتية في الخاص</td><td>ناجح</td></tr>
+<tr><td>المكالمات الصوتية الخاصة على أندرويد</td><td>ناجح</td></tr>
+<tr><td>مشاهدة الكاميرا بعد قبول صاحب البث</td><td>ناجح</td></tr>
+<tr><td>حماية الشاشة للخاص ومشاهدة الكاميرا باستخدام وسائل النظام المتاحة</td><td>ناجح</td></tr>
+<tr><td>إنهاء الجلسة عند إغلاق الخاص أو مغادرة الغرفة</td><td>ناجح</td></tr>
+</tbody></table>
+<footer>Wero Chat · ملخص عام لاختبارات الأمان · <bdi dir="ltr">1 / 2</bdi></footer>
+</article>
+<article lang="en" dir="ltr" id="english">
+<header>
+  <div class="brand">WERO CHAT</div>
+  <h1>Encryption and Security Report</h1>
+  <p class="sub">Android and Windows · Version 1.0.42</p>
+</header>
+<p class="summary">All scenarios listed below passed Wero team testing, including hands-on checks by the project owner.</p>
+<h2>How Wero protects content</h2>
+<p>Wero encrypts private room content on the sending device. Authorized participants verify its integrity and decrypt it on their devices. Decryption keys stay on participant devices. The Messaging Layer Security protocol manages conversation keys and updates them when membership changes. <a href="https://www.rfc-editor.org/rfc/rfc9420.html">RFC 9420</a>.</p>
+<p>The app verifies participants’ keys in the background. Anyone who wants to verify them independently can compare the security code.</p>
+<h2>Test results</h2>
+<table><thead><tr><th scope="col">Scenario</th><th scope="col">Result</th></tr></thead><tbody>
+<tr><td>Direct and group private room conversations</td><td>Pass</td></tr>
+<tr><td>Private text, images, and voice recordings</td><td>Pass</td></tr>
+<tr><td>Private voice calls on Android</td><td>Pass</td></tr>
+<tr><td>Camera viewing with the publisher’s approval</td><td>Pass</td></tr>
+<tr><td>Supported OS screen capture controls for private chats and camera viewing</td><td>Pass</td></tr>
+<tr><td>Session closure when a private chat closes or a participant leaves the room</td><td>Pass</td></tr>
+</tbody></table>
+<footer>Wero Chat · Public security testing summary · 2 / 2</footer>
+</article>
 </main>
+</body>
 </html>
