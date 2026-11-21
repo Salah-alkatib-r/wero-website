@@ -1,0 +1,61 @@
+@font-face{font-family:WeroTajawal;src:url('/assets/Tajawal-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:WeroTajawal;src:url('/assets/Tajawal-Bold.ttf') format('truetype');font-weight:700 900;font-display:swap}
+.price-page{--green:#174c40;--ink:#143d33;--line:#d2e1d8;--gold:#ebcd7b;margin:0;background:#f5f8f4;color:var(--ink);font:1.06rem/1.55 WeroTajawal,Tahoma,sans-serif}
+.price-page *{box-sizing:border-box}
+.price-page a{color:inherit;text-underline-offset:.18em}
+.price-page a:focus-visible{outline:3px solid #a77824;outline-offset:4px;border-radius:5px}
+.price-wrap{width:min(100% - 2rem,66rem);margin-inline:auto}
+.price-skip{position:absolute;inset-block-start:.5rem;inset-inline-start:.5rem;z-index:3;padding:.6rem 1rem;background:#fff;transform:translateY(-200%)}
+.price-skip:focus{transform:none}
+.price-masthead{background:#09342d;color:white;border-bottom:1px solid #2f6657}
+.price-nav,.price-nav nav,.price-contact,.price-contact-links,.price-footer .price-wrap{display:flex;align-items:center;flex-wrap:wrap;gap:1rem}
+.price-nav,.price-contact,.price-footer .price-wrap{justify-content:space-between}
+.price-nav{min-height:4.4rem;padding-block:.6rem}
+.price-brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;font-size:1.55rem;font-weight:800}
+.price-brand img{object-fit:contain;border-radius:10px}
+.price-brand span span{color:var(--gold)}
+.price-nav nav a,.price-contact-links a{font-weight:700}
+.price-hero{background:radial-gradient(ellipse at 12% 62%,#216d58 0,transparent 52%),#09342d;color:#fff;padding:clamp(2.5rem,7vw,5.5rem) 0}
+.price-hero h1{font-size:clamp(2.9rem,7vw,5.6rem);line-height:1.02;margin:0 0 .55rem;font-weight:800}
+.price-hero p{margin:.35rem 0;color:#eff8f2;font-size:clamp(1.12rem,2.1vw,1.42rem)}
+.price-hero .price-currency{margin-top:1rem;color:#f3d789;font-size:1rem}
+.price-content{padding-bottom:3rem}
+.price-jumps{display:flex;flex-wrap:wrap;gap:.65rem;padding:1.45rem 0;font-weight:700}
+.price-jumps a{background:white;border:1px solid var(--line);border-radius:3rem;padding:.54rem .9rem;text-decoration:none}
+.price-jumps a:hover{background:#e8f2ec;border-color:#a5c1b2}
+.price-section{scroll-margin-top:1rem;margin:1rem 0 2.4rem}
+.price-section h2,.price-contact h2{margin:0 0 .75rem;font-size:clamp(1.65rem,3.5vw,2.25rem);line-height:1.25}
+.price-grid{display:grid;gap:1rem;margin-top:1rem}
+.price-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.price-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.price-card,.price-table-frame{border:1px solid var(--line);background:white;border-radius:1rem;overflow:hidden}
+.price-card{padding:1.25rem 1.4rem;text-align:start}
+.price-card h3{font-size:1.26rem;margin:0}
+.price-cost{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap;font-weight:800;color:var(--green)}
+.price-cost bdi{font-size:2.05rem;font-variant-numeric:tabular-nums}
+.price-cost span{font-size:1rem;color:#4c645a;font-weight:400}
+.price-card ul{padding-inline-start:1.15rem;margin:.45rem 0 0;color:#39584c}
+.price-card li{padding:.13rem 0}
+.price-card li::marker{color:#987128}
+.price-table-frame table{width:100%;border-collapse:collapse;text-align:start;font-variant-numeric:tabular-nums}
+.price-table-frame th,.price-table-frame td{padding:.72rem 1rem;border-bottom:1px solid var(--line)}
+.price-table-frame th{text-align:start}
+.price-table-frame thead{background:#e8f2ec}
+.price-table-frame tbody tr:last-child>*{border-bottom:0}
+.price-table-frame td{font-weight:700;color:var(--green)}
+.price-bundles .price-card{background:#113e35;color:#fff;border-color:#2e6757}
+.price-bundles .price-cost{color:var(--gold)}
+.price-bundles .price-card ul{color:#e0efe7}
+.price-bundles .price-card li::marker{color:var(--gold)}
+.price-contact{border:1px solid var(--line);border-radius:1rem;background:#e9f2eb;padding:1.35rem}
+.price-contact h2,.price-contact p{margin:0}
+.price-contact-links a{background:white;border:1px solid var(--line);padding:.5rem .85rem;border-radius:.6rem;text-decoration:none}
+.price-contact-links a:first-child{background:#174c40;color:white;border-color:#174c40}
+.price-footer{background:#09342d;color:#fff;padding-block:1.5rem}
+#home .hero-copy h1{font-size:clamp(2.65rem,4.7vw,5.3rem);line-height:1.08;letter-spacing:0}
+#iphone-launch .wero-iphone-countdown{background:rgba(20,100,83,.1);border-radius:.75rem;padding:.75rem .9rem;margin:.9rem 0}
+.wero-iphone-countdown p{margin:0;font-weight:700}
+.wero-iphone-countdown output{display:flex;flex-wrap:wrap;gap:.35rem .75rem;font-variant-numeric:tabular-nums;margin-top:.25rem}
+.wero-iphone-countdown output span{white-space:nowrap}
+.wero-iphone-countdown [hidden]{display:none}
+@media(max-width:40rem){.price-wrap{width:min(100% - 1.25rem,66rem)}.price-grid-two,.price-grid-three{grid-template-columns:1fr}.price-card{padding:1.05rem}.price-table-frame th,.price-table-frame td{padding:.65rem .5rem}.price-nav nav{gap:.7rem}.price-nav nav a{font-size:.95rem}}
