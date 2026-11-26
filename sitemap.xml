@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://werochat.app/</loc></url>
+  <url><loc>https://werochat.app/en/</loc></url>
+  <url><loc>https://werochat.app/android/</loc></url>
+  <url><loc>https://werochat.app/prices/</loc></url>
   <url><loc>https://werochat.app/privacy/</loc></url>
   <url><loc>https://werochat.app/conditions/</loc></url>
   <url><loc>https://werochat.app/contact/</loc></url>
