@@ -19,13 +19,13 @@ export async function onRequest({ request }) {
   let expectedSha='';
   if(platform){
     try{
-      const catalog=await fetch('https://wero-test.159.195.11.245.nip.io/api/v1/app/releases',{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
+      const catalog=await fetch('https://api.werochat.app/api/v1/app/releases',{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
       if(catalog.status!==404){
         if(!catalog.ok)throw Error('catalog-unavailable');
         const data=await catalog.json();if(data.schema!=='wero-app-releases-v1'||data.ok!==true)throw Error('invalid-catalog');
         const entry=data.platforms?.[platform];
         if(entry){if(!/^[a-f0-9]{64}$/.test(entry.sha256)||!Number.isSafeInteger(entry.bytes)||entry.bytes<1||entry.bytes>536870912)throw Error('invalid-catalog');
-          expectedSha=entry.sha256;asset={...asset,url:`https://wero-test.159.195.11.245.nip.io/api/v1/app/download/${platform}/${entry.sha256}`};}
+          expectedSha=entry.sha256;asset={...asset,url:`https://api.werochat.app/api/v1/app/download/${platform}/${entry.sha256}`};}
       }
       catalog.body?.cancel().catch(()=>{});
     }catch{return new Response('تعذر التحقق من النسخة المتاحة. حاول مجددًا بعد قليل.',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store','X-Wero-Publisher':'v1'}});}
