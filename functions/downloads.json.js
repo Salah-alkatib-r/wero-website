@@ -6,7 +6,7 @@ export async function onRequest({request}){
  const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Wero-Publisher':'v1','X-Content-Type-Options':'nosniff'};
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{...headers,Allow:'GET, HEAD'}});
  try{
-  const response=await fetch('https://wero-test.159.195.11.245.nip.io/api/v1/app/releases',{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
+  const response=await fetch('https://api.werochat.app/api/v1/app/releases',{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
   const result=JSON.parse(JSON.stringify(defaults));
   if(response.status!==404){
    if(!response.ok)throw Error('catalog-unavailable');
